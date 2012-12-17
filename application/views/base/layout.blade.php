@@ -1,22 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Expires" content="Fri, Jan 01 1900 00:00:00 GMT">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Cache-Control" content="no-cache">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta http-equiv="Lang" content="en">
-<meta name="author" content="">
-<meta http-equiv="Reply-to" content="@.com">
-<meta name="generator" content="PhpED 6.0">
-<meta name="description" content="">
-<meta name="keywords" content="">
-<meta name="creation-date" content="06/01/2011">
-<meta name="revisit-after" content="15 days">
-<title>Untitled</title>
-<link rel="stylesheet" type="text/css" href="my.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>{{ $title }}</title>
+  {{ HTML::style('bundles/bootstrap/css/bootstrap.css') }}
+  {{ HTML::style('bundles/skins/default/css/styles.css') }}
 </head>
 <body>
-  {{ $content }}
+  <div class="container content">
+  
+    @section('topline')
+    <div class="row">
+      <div class="span6">
+      
+      </div>
+      <div class="span3">
+        <a href="#">Авторизация</a> | <a href="#">регистрация</a>
+      </div>
+      <div class="span3">
+        <a class="btn btn-danger" href="#">Разместить объявление</a>
+      </div>      
+    </div>
+    @yield_section
+
+    {{ $content }}
+    
+  </div>
 </body>
 </html>

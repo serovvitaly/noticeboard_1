@@ -1,0 +1,19 @@
+.container.content{
+    font: 13px/1.54 Arial,Tahoma,sans-serif;
+}
+
+ul{
+    list-style: none;
+    margin-left: 0;
+}
+
+
+#main-catalog-panel{
+    padding: 20px 0;
+}
+#main-catalog-panel .title{
+    font-size: 16px;
+    padding: 0 0 5px;
+    border-bottom: 1px solid #E4E4E4;
+    margin-bottom: 5px;
+}

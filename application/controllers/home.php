@@ -32,7 +32,10 @@ class Home_Controller extends Base_Controller {
 
 	public function action_index()
 	{
+        
 		$this->layout->content = View::make('base.index');
+        
+        $this->layout->title = 'Page Foo Title';
 	}
 
 }

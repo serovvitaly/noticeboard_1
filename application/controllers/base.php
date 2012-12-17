@@ -2,6 +2,10 @@
 
 class Base_Controller extends Controller {
 
+    
+    public $layout = 'base.layout';
+    
+    
 	/**
 	 * Catch-all method for requests that can't be matched.
 	 *
@@ -16,8 +20,9 @@ class Base_Controller extends Controller {
     
     
     public function before()
-    {
-        $this->layout = View::make('base.layout');
+    {       
+        $this->layout->title = '';
+        $this->layout->content = '';
     }
 
 }
