@@ -13,5 +13,11 @@ class Base_Controller extends Controller {
 	{
 		return Response::error('404');
 	}
+    
+    
+    public function before()
+    {
+        $this->layout = View::make('base.layout');
+    }
 
 }
