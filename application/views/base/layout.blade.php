@@ -5,6 +5,8 @@
   <title>{{ $title }}</title>
   {{ HTML::style('bundles/bootstrap/css/bootstrap.css') }}
   {{ HTML::style('bundles/skins/default/css/styles.css') }}
+  
+  {{ HTML::script('bundles/jquery/jquery-1.8.3.min.js') }}
 </head>
 <body>
   <div class="container content">
@@ -15,7 +17,11 @@
       
       </div>
       <div class="span3">
-        <a href="#">Авторизация</a> | <a href="#">регистрация</a>
+      <? if (Auth::check()) { ?>
+        Привет! <a href="/auth/logout/">выход</a>
+      <? } else { ?>
+        <a href="/auth/">Авторизация / регистрация</a>
+      <? } ?>
       </div>
       <div class="span3">
         <a class="btn btn-danger" href="#">Разместить объявление</a>
@@ -26,5 +32,7 @@
     {{ $content }}
     
   </div>
+  
+  {{ HTML::script('bundles/bootstrap/js/bootstrap.js') }}
 </body>
 </html>

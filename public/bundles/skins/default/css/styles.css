@@ -1,5 +1,5 @@
 .container.content{
-    font: 13px/1.54 Arial,Tahoma,sans-serif;
+    font: 12px/1.54 Arial,Tahoma,sans-serif;
 }
 
 ul{
@@ -16,4 +16,20 @@ ul{
     padding: 0 0 5px;
     border-bottom: 1px solid #E4E4E4;
     margin-bottom: 5px;
+}
+
+#main-catalog-list h4{
+    font-weight: normal;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding-bottom: 0;
+    margin: 20px 0 0px;
+}
+
+
+.box-login .form-horizontal .control-label {
+    width: 100px;
+}
+.box-login .form-horizontal .controls {
+    margin-left: 130px;
 }
