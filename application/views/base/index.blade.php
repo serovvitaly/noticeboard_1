@@ -11,7 +11,7 @@
               if (isset($ctg['items']) AND count($ctg['items']) > 0) {
                   foreach ($ctg['items'] AS $ctg_item_id => $ctg_item) {
       ?>
-      <li><a href=""><?= $ctg_item['name'] ?></a></li>
+      <li><a href="/cat/<?= Helper::lower( Helper::enstr($ctg_item['name']) ) ?>"><?= $ctg_item['name'] ?></a></li>
       <?
                   }
               }

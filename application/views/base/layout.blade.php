@@ -7,14 +7,21 @@
   {{ HTML::style('bundles/skins/default/css/styles.css') }}
   
   {{ HTML::script('bundles/jquery/jquery-1.8.3.min.js') }}
+  
+  <script type="text/javascript">
+      $(document).ready(function(){
+          $('*').tooltip();
+      });
+  </script>
+  
 </head>
 <body>
   <div class="container content">
   
     @section('topline')
-    <div class="row">
+    <div class="row header">
       <div class="span6">
-      
+      <a href="/">ГЛАВНАЯ</a>
       </div>
       <div class="span3">
       <? if (Auth::check()) { ?>
@@ -24,7 +31,7 @@
       <? } ?>
       </div>
       <div class="span3">
-        <a class="btn btn-danger" href="#">Разместить объявление</a>
+        <a class="btn btn-danger" href="/place/">Разместить объявление</a>
       </div>      
     </div>
     @yield_section

@@ -52,12 +52,7 @@ class Home_Controller extends Base_Controller {
             }
         }
         
-        $this->layout->content->catalog = $catalog;
-        
-        $this->layout->content->get_ctg = function($ctg_id){
-            return 'CTG=' . $ctg_id;
-        };
-        
+        $this->layout->content->catalog = $catalog;        
         
         $this->layout->title = 'Page Foo Title';
 	}
