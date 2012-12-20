@@ -11,6 +11,9 @@
   <script type="text/javascript">
       $(document).ready(function(){
           $('*').tooltip();
+          /*$('.announcements-item .wrapper .details .views').tooltip({
+              placement: 'right'
+          });*/
       });
   </script>
   
@@ -31,7 +34,7 @@
       <? } ?>
       </div>
       <div class="span3">
-        <a class="btn btn-danger" href="/place/">Разместить объявление</a>
+        <a class="button-place" href="/place/">Разместить объявление</a>
       </div>      
     </div>
     @yield_section

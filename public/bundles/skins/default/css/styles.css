@@ -1,11 +1,39 @@
+*{
+    font: 11px/14px tahoma, arial, sans-serif;
+}
 .container.content{
-    font: 12px/1.54 Arial,Tahoma,sans-serif;
+    font: 11px/14px tahoma, arial, sans-serif;
 }
 
 .container.content .header{
     height: 100px;
     border-bottom: 1px solid #E0E0E0;
     margin-bottom: 10px;
+    border-top: 3px solid #FF8000;
+    padding-top: 10px;
+}
+
+.button-place{
+    background: red;
+    padding: 4px 10px 5px;
+    color: #FFFFFF;
+    font-size: 15px;
+    text-transform: uppercase;
+    
+    text-shadow: -1px -1px 0 #D60000;
+    
+    -webkit-border-radius: 4px;
+       -moz-border-radius: 4px;
+            border-radius: 4px;
+            
+       -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 1px 1px 2px rgba(0, 0, 0, 0.3);
+          -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 1px 1px 2px rgba(0, 0, 0, 0.3);
+               box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+.button-place:hover{
+    background: #C00000;
+    color: #FFFFFF;
+    text-decoration: none;
 }
 
 ul{
@@ -14,9 +42,9 @@ ul{
 }
 
 .btn {
-  -webkit-border-radius: 2px;
-     -moz-border-radius: 2px;
-          border-radius: 2px;
+  -webkit-border-radius: 1px;
+     -moz-border-radius: 1px;
+          border-radius: 1px;
 }
 .btn-group > .btn:first-child {
   -webkit-border-bottom-left-radius: 2px;
@@ -35,6 +63,42 @@ ul{
           border-bottom-right-radius: 2px;
   -moz-border-radius-topright: 2px;
   -moz-border-radius-bottomright: 2px;
+}
+
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  vertical-align: middle;
+  -webkit-border-radius: 1px;
+     -moz-border-radius: 1px;
+          border-radius: 1px;
+}
+
+
+.tooltip {
+  font-size: 11px;
+}
+.tooltip-inner {
+  padding: 3px 8px;
+  color: #ffffff;
+  background-color: #202020;
+  -webkit-border-radius: 1px;
+     -moz-border-radius: 1px;
+          border-radius: 1px;
 }
 
 
@@ -74,16 +138,91 @@ ul{
 }
 
 
-.announcements-item-6{
+.announcements-list{
+    background: /*url(../img/line.png)*/ #F0F0F0 repeat-y center;
+    padding: 6px;
+}
+
+.announcements-item{
     border: 1px solid #E0E0E0;
-    width: 479px;
-    height: 100px;
+    width: 467px;
+  /*  height: 100px; 
+    float: left; */
+    margin: 0 0 10px 0;
+    position: relative;
+    direction: ltr;
+    background: #FFFFFF;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+     -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.announcements-item:nth-child(odd){
+    margin-right: 5px;
+    clear: left;
     float: left;
-    margin: 0 -1px -1px 0;
 }
-.announcements-item-6 .wrapper{
-    padding: 4px;
+.announcements-item:nth-child(even){
+    margin-left: 5px;
+    clear: right;
+    float: right;
 }
+
+
+.announcements-item .wrapper{
+    width: 100%;
+    padding: 5px;
+}
+.announcements-item .wrapper .image{
+    width: 60px;
+}
+.announcements-item .wrapper .title{
+    margin: 0;
+}
+.announcements-item .wrapper .title a{
+    font-weight: bold;
+}
+
+.announcements-item .wrapper .details .descr{
+    color: #575757;
+    padding: 0 0 5px;
+}
+.announcements-item .wrapper .details{
+    margin-top: 7px;
+    width: 98%;
+}
+.announcements-item .wrapper .details td{
+    vertical-align: top;
+}
+.announcements-item .wrapper .details .price{
+    border-top: 1px dotted #D0D0D0;
+    font-size: 16px;
+    padding-top: 10px;
+}
+.announcements-item .wrapper .details .price sup{
+    font-size: 11px;
+}
+.announcements-item .wrapper .details .other{
+    padding-top: 5px;
+}
+
+.announcements-item .wrapper .footer{
+    border-top: 1px solid #D0D0D0;
+    margin-top: 10px;
+    width: 98%;
+}
+.announcements-item .wrapper .footer .added{
+    color: #ACACAC;
+    width: 170px;
+}
+.announcements-item .wrapper .footer .added span{
+    color: #585858;
+}
+.announcements-item .wrapper .footer .views{
+    width: 100px;
+    text-align: right;
+}
+
+
 .announcements-list-pagination{
     text-align: center;
 }
