@@ -33,7 +33,7 @@
         <a href="/auth/">Авторизация / регистрация</a>
       <? } ?>
       </div>
-      <div class="span3">
+      <div class="span3" style="padding-top: 10px;">
         <a class="button-place" href="/place/">Разместить объявление</a>
       </div>      
     </div>
