@@ -19,10 +19,11 @@
   
 </head>
 <body>
-  <div class="container content">
+  <div class="container-fluid content">
   
     @section('topline')
     <div class="row header">
+      <div style="height: 30px; background: #323232;"></div>
       <div class="span6">
       <a href="/">ГЛАВНАЯ</a>
       </div>
@@ -34,15 +35,12 @@
       <? } ?>
       </div>
       <div class="span3" style="padding-top: 10px;">
-        <a class="button-place" href="/place/">Разместить объявление</a>
+        
       </div>      
     </div>
     @yield_section
-
-    {{ $content }}
-    
   </div>
-  
+  {{ $content }}
   {{ HTML::script('bundles/bootstrap/js/bootstrap.js') }}
 </body>
 </html>

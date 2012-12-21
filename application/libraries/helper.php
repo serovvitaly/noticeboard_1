@@ -56,6 +56,9 @@ class Helper {
         //mb_http_output('UTF-8'); 
         //mb_internal_encoding("UTF-8");
         
+        $string = str_replace(array(',','.',':'), 
+                              '', $string);
+        
         $string = str_replace(array('а','б','в','г','д','е','ж','з','и','й','к','л','м','н','о','п','р','с','т','у','ф','х','ы','э','ь'), 
                               array('a','b','v','g','d','e','g','z','i','y','k','l','m','n','o','p','r','s','t','u','f','h','i','e',''), $string);
                               
