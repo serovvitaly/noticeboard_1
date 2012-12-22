@@ -21,7 +21,7 @@
 
 <div class="container-fluid content">
     <div class="left-side">@include('base.left_side')</div>
-    <div class="row" style="margin-left: 220px;">
+    <div class="row" style="margin-left: 232px;">
       <div style="height: 60px; border-bottom: 1px solid #F0F0F0; margin-bottom: 10px;"></div>
       <?
        if (isset($announcements) AND count($announcements) > 0) {

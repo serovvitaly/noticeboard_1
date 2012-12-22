@@ -50,11 +50,11 @@ $(document).ready(function(){
 </script>
 
 
-<!-- Modal -->
+<!-- Modal Place -->
 <div id="modal-place" class="modal hide" tabindex="-1" role="dialog" aria-labelledby="modal-place-label" aria-hidden="true">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h4 class="brand" id="modal-place-label">Новое объявление</h4>
+    <h4 class="brand" id="modal-place-label">Разместить объявление</h4>
   </div>
   <ul class="modal-navbar">
       <li class="active"><a href="#">Содержимое</a></li>

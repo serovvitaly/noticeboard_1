@@ -375,5 +375,6 @@ input[type="color"],
     background: #4d6577;
 }
 .modal-navbar li.active a{
-    background: #4d6577;
+    background: #FFFFFF;
+    color: #4d6577;
 }
