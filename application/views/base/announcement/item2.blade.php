@@ -5,7 +5,7 @@
         <tr>
             <td rowspan="2" class="image">
               <img alt="140x140" style="width: 50px; height: 50px;" src="/data/images/image.png">
-              <div class="nb-popover-image"></div>
+              <div class="nb-popover-image"><img alt="" src="http://img07.slando.ru/images_slandoru/95961475_1_261x203_novye-originalnye-ugg-moskva.jpg" /></div>
             </td>
             <td colspan="2" class="descr"><?= $ann['descr'] ?></td>
         </tr>

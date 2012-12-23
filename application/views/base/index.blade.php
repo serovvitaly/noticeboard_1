@@ -1,3 +1,4 @@
+<div class="container">
 <div class="row" id="main-catalog-list">
   <div class="span4">
   <?
@@ -28,4 +29,5 @@
       }
   ?>
   </div>
+</div>
 </div>

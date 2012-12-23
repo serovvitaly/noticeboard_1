@@ -229,7 +229,7 @@ input[type="color"],
 .announcements-item .wrapper{
     padding: 5px;
     border: 1px solid #E0E0E0;
-    height: 120px;
+    height: 114px;
 }
 .announcements-item .wrapper .image{
     width: 60px;
@@ -244,6 +244,7 @@ input[type="color"],
 .announcements-item .wrapper .details .descr{
     color: #575757;
     padding: 0 0 5px;
+    height: 28px;
 }
 .announcements-item .wrapper .details{
     margin-top: 7px;
@@ -291,10 +292,10 @@ input[type="color"],
 
 
 .left-side{
-    width: 200px;
-    border-right: 1px solid #C0C0C0;
-    margin-right: 10px;
-    padding-right: 20px;
+    width: 160px;
+    /*border-right: 1px solid #C0C0C0;*/
+    margin-right: 5px;
+    padding-right: 5px;
     float: left;
 }
 .left-side .accordion-heading a{
@@ -337,8 +338,9 @@ input[type="color"],
 .nb-popover-image{
     position: absolute;
     margin: -50px 0 0 60px;
-    height: 200px;
-    width: 200px;
+    /*height: 200px;
+    width: 200px;*/
+    padding: 5px;
     border: 1px solid #C0C0C0;
     background: #FFFFFF;
     display: none;
@@ -377,4 +379,37 @@ input[type="color"],
 .modal-navbar li.active a{
     background: #FFFFFF;
     color: #4d6577;
+}
+
+
+
+
+.popup-categorie-list{
+    width: 400px;
+    height: 200px;
+    background: #FFFFFF;
+    border: 1px solid red;
+    overflow: hidden;
+    position: absolute;
+    margin: -26px 0 0 96px;
+}
+.popup-categorie-list ul{
+    display: block;
+    float: left;
+}
+.popup-categorie-list li{
+    cursor: pointer;
+}
+.popup-categorie-list li:hover{
+    background: #0080FF;
+}
+.popup-categorie-list .categorie-sublist{
+    position: absolute;
+    margin: 0 0 0 200px;
+}
+.popup-categorie-list .categorie-sublist ul{
+    
+}
+.popup-categorie-list .categorie-sublist ul li{
+    
 }

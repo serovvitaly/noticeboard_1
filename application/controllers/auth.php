@@ -11,6 +11,8 @@ class Auth_Controller extends Base_Controller {
     {
         $email = Helper::post('email');
         $pass  = Helper::post('pass');
+        
+        var_dump($_POST);
 
         $msgs = array();
         if (!$email) {

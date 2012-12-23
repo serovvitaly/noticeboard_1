@@ -9,4 +9,9 @@ class Place_Controller extends Base_Controller {
         $this->layout->content = View::make('base.announcement.place');
     }
     
+    
+    public function action_add()
+    {
+        //
+    }
 }
