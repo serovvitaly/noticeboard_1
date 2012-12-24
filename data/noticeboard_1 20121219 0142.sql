@@ -1,4 +1,4 @@
-﻿-- Скрипт сгенерирован Devart dbForge Studio for MySQL, Версия 5.0.97.1
+-- Скрипт сгенерирован Devart dbForge Studio for MySQL, Версия 5.0.97.1
 -- Домашняя страница продукта: http://www.devart.com/ru/dbforge/mysql/studio
 -- Дата скрипта: 19.12.2012 1:42:52
 -- Версия сервера: 5.1.66-community-log
@@ -13,6 +13,8 @@
 -- Установка кодировки, с использованием которой клиент будет посылать запросы на сервер
 --
 SET NAMES 'utf8';
+
+CREATE DATABASE noticeboard_1;
 
 -- 
 -- Установка базы данных по умолчанию
