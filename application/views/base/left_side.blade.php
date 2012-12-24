@@ -31,9 +31,9 @@ $(document).ready(function(){
       <div class="tabbable">
           <ul class="nav nav-tabs">
             <li class="active"><a href="#place-tab1" data-toggle="tab">Основное</a></li>
-            <li class=""><a href="#place-tab2" data-toggle="tab">Фотогалерея</a></li>
-            <li class=""><a href="#place-tab3" data-toggle="tab">Контактные данные</a></li>
-            <li class=""><a href="#place-tab4" data-toggle="tab">Завершение</a></li>
+            <li class="disabled"><a href="#place-tab2" data-toggle="tab">Фотогалерея</a></li>
+            <li class="disabled"><a href="#place-tab3" data-toggle="tab">Контактные данные</a></li>
+            <li class="disabled"><a href="#place-tab4" data-toggle="tab">Завершение</a></li>
           </ul>
           <div class="tab-content" style="height: 260px;">
             <div class="tab-pane active" id="place-tab1">
