@@ -138,7 +138,7 @@ input[type="color"],
     background-image: linear-gradient(to bottom, #ffffff, #f2f2f2);  
 }
 .modal-footer {
-  padding: 8px 15px 10px;
+    padding: 8px 15px 10px;
 }
 
 .modal-backdrop, .modal-backdrop.fade.in {
@@ -152,6 +152,18 @@ input[type="color"],
           border-radius: 2px;
 }
 
+
+
+.nav-tabs > li > a {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  line-height: 20px;
+  padding: 3px 10px;
+  border: 1px solid transparent;
+  -webkit-border-radius: 2px 2px 0 0;
+     -moz-border-radius: 2px 2px 0 0;
+          border-radius: 2px 2px 0 0;
+}
 
 
 
@@ -412,4 +424,14 @@ input[type="color"],
 }
 .popup-categorie-list .categorie-sublist ul li{
     
+}
+
+
+
+.plase-categorie-selected{
+    position: absolute;
+    margin: 6px 0 0 143px;
+}
+.plase-categorie-selected.empty{
+    color: red;
 }
