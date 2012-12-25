@@ -143,6 +143,9 @@ input[type="color"],
             border-radius: 3px;
 }
 .modal h4{
+    font-weight: normal;
+}
+.modal .modal-header h4{
     line-height: 0;
     font-weight: normal;
 }
@@ -450,4 +453,9 @@ input[type="color"],
 }
 .plase-categorie-selected.empty{
     color: red;
+}
+
+
+.modal .span3 h4{
+    margin-top: 0;
 }
