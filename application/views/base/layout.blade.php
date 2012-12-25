@@ -24,7 +24,7 @@
   
 </head>
 <body>
-  <div class="container content">
+  <div class="container">
   
     @section('topline')
     <div class="row header">
