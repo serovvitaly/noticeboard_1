@@ -1,19 +1,23 @@
 
-<?= View::make('base.announcement.catalog', array('categories' => $categories)) ?>
+<?
+echo View::make('base.announcement.catalog', array(
+    'categories'      => $categories,
+    'btn_group_width' => '100%'
+)) 
+?>
 
 
 <script type="text/javascript">
 $(document).ready(function(){
-    $("#accordion2").collapse();
     
     $('#modal-place').modal({
         show: false,
         backdrop: true
     });
     $('#modal-place').on('hide', function () {
-        /**
-        * @todo Написать код, который проверяет, если часть данных формы заполнена, то предупреждать пользователя, что при закрытии окна данные будут утеряны
-        */
+        
+        // TODO: Написать код, который проверяет, если часть данных формы заполнена, то предупреждать пользователя, что при закрытии окна данные будут утеряны
+        
     });
 });
 </script>
@@ -41,7 +45,7 @@ $(document).ready(function(){
             
                 <div style="padding-bottom: 10px;" class="plase-categories">
                     <div class="plase-categorie-selected empty">выберите категорию</div>
-                    <?= View::make('base.announcement.catalog', array('categories' => $categories)) ?>
+                    <?= View::make('base.announcement.catalog', array('categories' => $categories, 'btn_group_width' => '132px')) ?>
                 </div>
                 <script type="text/javascript">
                     $('#modal-place .plase-categories .dropdown-menu ul a').click(function(){
@@ -61,7 +65,7 @@ $(document).ready(function(){
                 <div title=" Загрузить картинку" style="cursor: pointer; width: 130px; height: 130px; border: 1px solid #CCCCCC; float: left; margin-right: 10px; background: url(http://vk.com/images/camera_a.gif) center no-repeat;"></div>
 
                 <input style="width: 69%; margin-bottom: 6px;" type="text" placeholder="Заголовок"><br/>
-                <textarea style="width: 69%; height: 86px; line-height: 15px;" cols="" rows="" placeholder="Описание"></textarea>
+                <textarea style="width: 69%; height: 86px; line-height: 15px;" cols="" rows="" placeholder="Описание (максимум 500 символов)"></textarea>
                 
                 <div class="btn-group" style="margin-bottom: 10px;">
                     <a class="btn btn-small dropdown-toggle" data-toggle="dropdown" href="#" style="width: 116px;">Тип объявления</a>
@@ -97,7 +101,10 @@ $(document).ready(function(){
                 
             </div>
             <div class="tab-pane" id="place-tab2">
-              <p>ФОТКИ</p>
+              <p>Вы можете зогрузить до 10 фотографий</p>
+              <div class="media">
+                  <a class="pull-left" href="#"><img class="media-object" alt="" src=""></a>
+              </div>
             </div>
             <div class="tab-pane" id="place-tab3">
               <p>Howdy, I'm in Section 2.</p>

@@ -45,7 +45,9 @@
     </div>
     @yield_section
   </div>
+  <div class="container content">
   {{ $content }}
+  </div>
   {{ HTML::script('bundles/bootstrap/js/bootstrap.js') }}
   
   
@@ -55,15 +57,9 @@
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
     <h4 class="brand">Авторизация/регистрация</h4>
   </div>
-  <form action="/auth/login/" style="margin: 0;" method="POST">
   <div class="modal-body">
     <?= View::make('base.auth') ?>
   </div>
-  <div class="modal-footer">
-    <button type="submit" class="btn btn-small btn-primary">Поехали</button>
-    <button class="btn btn-small" data-dismiss="modal" aria-hidden="true">Отмена</button>
-  </div>
-  </form>
 </div>
   
   

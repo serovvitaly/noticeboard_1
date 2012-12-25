@@ -37,7 +37,7 @@ Route::get('/', function()
     //
 });
 
-Route::get('/cat/(:any)', 'categorie@get');
+Route::get('/ctg_(:any)', 'categorie@get');
 
 Route::controller( Controller::detect() );
 

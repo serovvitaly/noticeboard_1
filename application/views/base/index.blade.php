@@ -1,4 +1,3 @@
-<div class="container">
 <div class="row" id="main-catalog-list">
   <div class="span4">
   <?
@@ -12,7 +11,7 @@
               if (isset($ctg['items']) AND count($ctg['items']) > 0) {
                   foreach ($ctg['items'] AS $ctg_item_id => $ctg_item) {
       ?>
-      <li><a href="/cat/<?= Helper::lower( Helper::enstr($ctg_item['name']) ) ?>"><?= $ctg_item['name'] ?></a></li>
+      <li><a href="/ctg_<?= Helper::lower( Helper::enstr($ctg_item['name']) ) ?>"><?= $ctg_item['name'] ?></a></li>
       <?
                   }
               }
@@ -29,5 +28,4 @@
       }
   ?>
   </div>
-</div>
 </div>
