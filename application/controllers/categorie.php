@@ -3,6 +3,16 @@
 
 class Categorie_Controller extends Base_Controller {
     
+    public $layout = 'base.column2-left';
+    
+    protected $_categories = array();
+    
+    public function before()
+    {
+        parent::before();
+        
+        $this->layout->nest('left_side', 'base.left_side');
+    }
     
     public function action_get($cat)
     {
@@ -26,18 +36,7 @@ class Categorie_Controller extends Base_Controller {
             array('title'=>'Объявление такое то столько', 'descr'=>''),
         );
         
-        
-        $categories_mix = Categorie::all();
-        
-        $categories = array();
-        
-        if ($categories_mix) {
-            foreach ($categories_mix AS $cat) {
-                $categories[$cat->parent][] = $cat;
-            }
-        }
-        
-        $this->layout->content->categories = $categories;
+        $this->layout->content->categories = $this->_categories;
         
     }
     

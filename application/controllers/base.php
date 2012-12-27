@@ -23,6 +23,17 @@ class Base_Controller extends Controller {
     {       
         $this->layout->title = '';
         $this->layout->content = '';
+        
+        
+        $categories_mix = Categorie::all();
+        $categories = array();
+        
+        if ($categories_mix) {
+            foreach ($categories_mix AS $cat) {
+                $categories[$cat->parent][] = $cat;
+            }
+        }
+        Glob::set('categories', $categories);
     }
 
 }

@@ -55,7 +55,9 @@
       <li><a href="#">Прочее</a></li>
     </ul>
   </div>
+  @section('content')
   {{ $content }}
+  @yield_section
   </div>
   {{ HTML::script('bundles/bootstrap/js/bootstrap.js') }}
   

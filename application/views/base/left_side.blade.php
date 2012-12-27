@@ -1,8 +1,8 @@
 
 <?
 echo View::make('base.announcement.catalog', array(
-    'categories'      => $categories,
-    'btn_group_width' => '100%'
+    'btn_group_width' => '100%',
+    'btn_class' => 'btn-info'
 )) 
 ?>
 
@@ -45,7 +45,7 @@ $(document).ready(function(){
             
                 <div style="padding-bottom: 10px;" class="plase-categories">
                     <div class="plase-categorie-selected empty">выберите категорию</div>
-                    <?= View::make('base.announcement.catalog', array('categories' => $categories, 'btn_group_width' => '132px')) ?>
+                    <?= View::make('base.announcement.catalog', array('btn_group_width' => '132px')) ?>
                 </div>
                 <script type="text/javascript">
                     $('#modal-place .plase-categories .dropdown-menu ul a').click(function(){

@@ -1,4 +1,4 @@
-<div class="row" id="main-catalog-list">
+<div  id="main-catalog-list">
   <div class="span4">
   <?
       $counter = 1;
