@@ -40,12 +40,21 @@
       <? } ?>
       </div>
       <div class="span3" style="padding-top: 10px;">
-        <a class="button-place" href="/place/" data-toggle="modal" data-target="#modal-place">Разместить объявление</a>
+        <a class="button-place" href="/place/">Разместить объявление</a>
       </div>      
     </div>
     @yield_section
   </div>
-  <div class="container content">
+  <div class="container content" style="margin-top: 30px;">
+  <div class="top-navigation violet">
+    <ul class="tabs">
+      <li class="active"><a href="#">Куплю</a></li>
+      <li><a href="#">Продам</a></li>
+      <li><a href="#">Сниму</a></li>
+      <li><a href="#">Сдам</a></li>
+      <li><a href="#">Прочее</a></li>
+    </ul>
+  </div>
   {{ $content }}
   </div>
   {{ HTML::script('bundles/bootstrap/js/bootstrap.js') }}
