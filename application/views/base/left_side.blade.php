@@ -6,6 +6,25 @@ echo View::make('base.announcement.catalog', array(
 )) 
 ?>
 
+<?
+    echo View::make('component.dropdown', array(
+        'caption' => 'Хорошая кнопка',
+        'style' => 'danger',
+        'size'  => 'small',
+        'icon' => array(
+            'color' => 'white',
+            'type'  => 'plus',
+            'float' => 'right'
+        ),
+        'items' => array(
+            array('title'=>'Item-1', 'href'=>'st-1'),
+            array('title'=>'Item-2', 'href'=>'st-2'),
+            '-',
+            array('title'=>'Item-3', 'items'=>array()),
+            array('title'=>'Item-4', 'href'=>'st-4'),
+        )
+    ));
+?>
 
 <script type="text/javascript">
 $(document).ready(function(){
