@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title>{{ $title }}</title>
+  <title>@if (isset($title)) {{ $title }} @endif</title>
   {{ HTML::style('bundles/bootstrap/css/bootstrap.css') }}
   {{ HTML::style('bundles/skins/default/css/styles.css') }}
   
@@ -48,15 +48,15 @@
   <div class="container content" style="margin-top: 30px;">
   <div class="top-navigation violet">
     <ul class="tabs">
-      <li class="active"><a href="#">Куплю</a></li>
-      <li><a href="#">Продам</a></li>
-      <li><a href="#">Сниму</a></li>
-      <li><a href="#">Сдам</a></li>
-      <li><a href="#">Прочее</a></li>
+      <li class="active"><a href="/buy/">Куплю</a></li>
+      <li><a href="/sell/">Продам</a></li>
+      <li><a href="/take/">Сниму</a></li>
+      <li><a href="/rent/">Сдам</a></li>
+      <li><a href="/other/">Прочее</a></li>
     </ul>
   </div>
   @section('content')
-  {{ $content }}
+    @if (isset($content)) {{ $content }} @endif
   @yield_section
   </div>
   {{ HTML::script('bundles/bootstrap/js/bootstrap.js') }}
