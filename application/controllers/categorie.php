@@ -5,8 +5,6 @@ class Categorie_Controller extends Base_Controller {
     
     public $layout = 'base.column2-left';
     
-    protected $_categories = array();
-    
     public function before()
     {
         parent::before();
@@ -14,9 +12,11 @@ class Categorie_Controller extends Base_Controller {
         $this->layout->nest('left_side', 'base.left_side');
     }
     
-    public function action_get($cat)
+    public function action_get($ctg)
     {
-        $this->layout->content = View::make('base.categorie');
+        Glob::set('ctg', $ctg);
+        
+        $this->layout->content = View::make('base.categorie');        
         
         $this->layout->content->announcements = array(
             array('title'=>'Продажа 2-х комнт.кв. Ленинский пр, хор.ремонт', 'descr'=>'Для корпоративном мероприятии компании QIWI, посвященном'),
@@ -34,10 +34,35 @@ class Categorie_Controller extends Base_Controller {
             array('title'=>'Объявление такое то столько', 'descr'=>''),
             array('title'=>'Объявление такое то столько', 'descr'=>''),
             array('title'=>'Объявление такое то столько', 'descr'=>''),
-        );
+        );        
+    }
+    
+    
+    public function action_filter($filter, $ctg = NULL)
+    {        
+        Glob::set('ctg', $ctg);
         
-        $this->layout->content->categories = $this->_categories;
+        $this->layout->content = $filter;  
         
+        $this->layout->content = View::make('base.categorie');        
+        
+        $this->layout->content->announcements = array(
+            array('title'=>'Продажа 2-х комнт.кв. Ленинский пр, хор.ремонт', 'descr'=>'Для корпоративном мероприятии компании QIWI, посвященном'),
+            array('title'=>'Объявление такое то', 'descr'=>'Для корпоративном мероприятии компании QIWI, посвященном'),
+            array('title'=>'Объявление такое то столько', 'descr'=>'Для корпоративном мероприятии компании QIWI, посвященном празднованию нового'),
+            array('title'=>'Объявление такое то столько', 'descr'=>''),
+            array('title'=>'Объявление такое то столько', 'descr'=>''),
+            array('title'=>'Объявление такое то столько', 'descr'=>''),
+            array('title'=>'Объявление такое то столько', 'descr'=>''),
+            array('title'=>'Объявление такое', 'descr'=>''),
+            array('title'=>'Объявление такое то столько', 'descr'=>''),
+            array('title'=>'Объявление такое то столько', 'descr'=>''),
+            array('title'=>'Объявление такое то столько', 'descr'=>''),
+            array('title'=>'Объявление такое то столько', 'descr'=>''),
+            array('title'=>'Объявление такое то столько', 'descr'=>''),
+            array('title'=>'Объявление такое то столько', 'descr'=>''),
+            array('title'=>'Объявление такое то столько', 'descr'=>''),
+        );    
     }
     
     

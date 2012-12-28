@@ -48,11 +48,11 @@
   <div class="container content" style="margin-top: 30px;">
   <div class="top-navigation violet">
     <ul class="tabs">
-      <li class="active"><a href="/buy/">Куплю</a></li>
-      <li><a href="/sell/">Продам</a></li>
-      <li><a href="/take/">Сниму</a></li>
-      <li><a href="/rent/">Сдам</a></li>
-      <li><a href="/other/">Прочее</a></li>
+      <li<?= Glob::get('filter') == 'buy'   ? ' class="active"' : '' ?>><a href="/buy/<?=   Glob::get('ctg') ? Glob::get('ctg') : '' ?>">Куплю</a></li>
+      <li<?= Glob::get('filter') == 'sell'  ? ' class="active"' : '' ?>><a href="/sell/<?=  Glob::get('ctg') ? Glob::get('ctg') : '' ?>">Продам</a></li>
+      <li<?= Glob::get('filter') == 'take'  ? ' class="active"' : '' ?>><a href="/take/<?=  Glob::get('ctg') ? Glob::get('ctg') : '' ?>">Сниму</a></li>
+      <li<?= Glob::get('filter') == 'rent'  ? ' class="active"' : '' ?>><a href="/rent/<?=  Glob::get('ctg') ? Glob::get('ctg') : '' ?>">Сдам</a></li>
+      <li<?= Glob::get('filter') == 'other' ? ' class="active"' : '' ?>><a href="/other/<?= Glob::get('ctg') ? Glob::get('ctg') : '' ?>">Прочее</a></li>
     </ul>
   </div>
   @section('content')

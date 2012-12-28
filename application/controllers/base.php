@@ -34,6 +34,17 @@ class Base_Controller extends Controller {
             }
         }
         Glob::set('categories', $categories);
+        
+        
+        Glob::set('ctg', NULL);
+        
+        if (isset(Request::route()->parameters[0]) AND in_array(Request::route()->parameters[0], array('buy','sell','take','rent','other'))) {
+            Glob::set('filter', Request::route()->parameters[0]);
+        }
+        else {
+            Glob::set('filter', 'buy');
+        }
+        
     }
 
 }

@@ -1,5 +1,5 @@
 <div class="btn-group"<?= isset($btn_group_width) ? ' style="width: '.$btn_group_width.'"' : '' ?>>
-<a href="#" style="display: block;" class="btn<?= isset($btn_class) ? " $btn_class" : '' ?> btn-small dropdown-toggle" data-toggle="dropdown" ><i class="icon-align-justify icon-white"></i> @if ( isset($caption) ) {{$caption}} @else КАТАЛОГ @endif</a>
+<a href="#" style="display: block;" class="btn<?= isset($btn_class) ? " $btn_class" : '' ?> btn-small dropdown-toggle" data-toggle="dropdown" ><i class="icon-align-justify<?= (isset($btn_class) AND in_array($btn_class, array('btn-info','btn-primary','btn-success','btn btn-warning','btn-danger','btn-inverse')) ) ? ' icon-white' : '' ?>"></i> @if ( isset($caption) ) {{$caption}} @else КАТАЛОГ @endif</a>
 <ul class="dropdown-menu">
 <?
     $categories = Glob::get('categories');
@@ -14,7 +14,7 @@
             if (isset($categories[$ctg->id]) AND count($categories[$ctg->id]) > 0) {
                 foreach ($categories[$ctg->id] AS $ctg_child) {
         ?>
-            <li><a tabindex="-1" id="ctg-<?= $ctg_child->id ?>" href="/ctg_<?= Helper::lower( Helper::enstr($ctg_child->name) ) ?>"><?= $ctg_child->name ?></a></li>
+            <li><a tabindex="-1" id="ctg-<?= $ctg_child->id ?>" href="<?= Glob::get('filter') ? '/'.Glob::get('filter') : '' ?>/ctg_<?= Helper::lower( Helper::enstr($ctg_child->name) ) ?>"><?= $ctg_child->name ?></a></li>
         <?
                 }
             }

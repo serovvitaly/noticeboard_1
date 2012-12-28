@@ -39,6 +39,10 @@ Route::get('/', function()
 
 Route::get('/ctg_(:any)', 'categorie@get');
 
+Route::get('/(buy|sell|take|rent|other)', 'categorie@filter');
+
+Route::get('/(buy|sell|take|rent|other)/(:any)', 'categorie@filter');
+
 Route::controller( Controller::detect() );
 
 /*
